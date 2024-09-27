@@ -21,6 +21,7 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 Run the following command to collect heuristic data or human involve data.
 
 ```bash
+cd Simulation/crew-algorithms/crew_algorithms/
 python main.py --scratch --skip_plot
 ```
 
