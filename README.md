@@ -48,7 +48,7 @@ cd Real-World/training/
 python train.py 
 ```
 
-## Testing Training Policy
+## Evaluation
 
 To evaluate the trained models and visualize the results, run:
 
@@ -56,7 +56,7 @@ For simulation
 ```bash
 cd Simulation/crew-algorithms/crew_algorithms/
 export PYTHONPATH=..:$PYTHONPATH
-WANDB_MODE=disabled python collect_data envs.num_seekers=[num_seekers] envs.num_hiders=[num_hiders] envs.start_seed=[starting_seed] envs.num_games=[num_games]
+WANDB_MODE=disabled python test envs.num_seekers=[num_seekers] envs.num_hiders=[num_hiders] envs.start_seed=[starting_seed] envs.num_games=[num_games]
 ```
 
 For Real-world
