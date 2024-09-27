@@ -1,5 +1,5 @@
 # HUMAC: Enabling Multi-Robot Collaboration from Single-Human Guidance
-[Zhengran Ji](https://jzr01.github.io/), [Lingyu Zhang](https://lingyu98.github.io/) [Boyuan Chen](http://boyuanchen.com/)
+[Zhengran Ji](https://jzr01.github.io/), [Lingyu Zhang](https://lingyu98.github.io/), [Boyuan Chen](http://boyuanchen.com/)
 <br>
 Duke University
 <br>
@@ -15,6 +15,13 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
     ```bash
     git clone https://github.com/generalroboticslab/HUMAC.git
     ```
+2. Install [CREW](https://github.com/generalroboticslab/CREW) for simulation
+
+3. Install dependency for real-robot
+
+   ```bash
+   pip install -r requirements.txt
+   ```
     
 ## Collecting Data
 
