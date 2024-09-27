@@ -27,7 +27,7 @@ export PYTHONPATH=..:$PYTHONPATH
 WANDB_MODE=disabled python collect_data envs.num_seekers=[num_seekers] envs.num_hiders=[num_hiders] envs.start_seed=[starting_seed] envs.num_games=[num_games]
 ```
 
-For Real-world
+\textbf{Real-world}:
 ```bash
 cd Real-World/Hide-and-Seek-real-robot/
 python collect_heuristic_data.py
