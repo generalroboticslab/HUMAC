@@ -4,7 +4,7 @@
 Duke University
 <br>
 
-![Multi-Agent/Robot Collaboration](images/figure.png)
+![Multi-Agent/Robot Collaboration](images/Teaser.jpeg)
 
 
 ## Overview
