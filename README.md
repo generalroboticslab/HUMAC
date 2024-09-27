@@ -3,6 +3,8 @@
 <br>
 Duke University
 <br>
+
+
 ## Overview
 Learning collaborative behaviors is essential for multi-agent systems. Traditionally, multi-agent reinforcement learning solves this implicitly through a joint reward and centralized observations, assuming collaborative behavior will emerge. Other studies propose to learn from demonstrations of a group of collaborative experts. Instead, we propose an efficient and explicit way of learning collaborative behaviors in multi-agent systems by leveraging expertise from only a single human. Our insight is that humans can naturally take on various roles in a team. We show that agents can effectively learn to collaborate by allowing a human operator to dynamically switch between controlling agents for a short period and incorporating a human-like theory-of-mind model of teammates. Our experiments showed that our method improves the success rate of a challenging collaborative hide-and-seek task by up to 58$\%$ with only 40 minutes of human guidance. We further demonstrate our findings transfer to the real world by conducting multi-robot experiments.
 
@@ -14,15 +16,9 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
     git clone https://github.com/generalroboticslab/HUMAC.git
     ```
     
-2. Install the required dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
 ## Collecting Data
 
-Run the following command to train the model. The `--scratch` flag will force training from scratch, while `--skip_plot` will skip saving training loss plots.
+Run the following command to collect heuristic data or human involve data.
 
 ```bash
 python main.py --scratch --skip_plot
@@ -48,12 +44,6 @@ To visualize the ground truth in `.pcd` format, use:
 ```bash
 python evaluation/gt_vis_pcd.py --data_path /path/to/data
 ```
-
-## Dataset
-Download our [dataset](https://duke.box.com/s/02algnthvx1fb3znt50cdpov7ehgseto) and unzip
-
-## Hardwares
-The list of our hardware set and CAD model are under [hardwares](https://github.com/generalroboticslab/WildFusion/tree/main/hardwares) subdirectory.
 
 ## Acknowledgement
 [DJI Robomaster_sdk](https://github.com/dji-sdk/RoboMaster-SDK)
