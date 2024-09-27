@@ -34,10 +34,18 @@ python collect_heuristic_data.py
 ```
 
 ## Training
-Run the following command to train the model. The `--scratch` flag will force training from scratch, while `--skip_plot` will skip saving training loss plots.
+Run the following command to train or fine-tune the model.
 
+For simulation
 ```bash
-python main.py --scratch --skip_plot
+cd Simulation/training/
+python train.py
+```
+
+For real-world
+```bash
+cd Real-World/training/
+python train.py 
 ```
 
 ## Testing Training Policy
