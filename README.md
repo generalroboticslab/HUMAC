@@ -20,10 +20,17 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 
 Run the following command to collect heuristic data or human involve data.
 
+For simulation
 ```bash
 cd Simulation/crew-algorithms/crew_algorithms/
 export PYTHONPATH=..:$PYTHONPATH
 WANDB_MODE=disabled python collect_data envs.num_seekers=[num_seekers] envs.num_hiders=[num_hiders] envs.start_seed=[starting_seed] envs.num_games=[num_games]
+```
+
+For Real-world
+```bash
+cd cd Real-World/Hide-and-Seek-real-robot/
+python collect_heuristic_data.py
 ```
 
 ## Training
