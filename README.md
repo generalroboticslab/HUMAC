@@ -11,23 +11,16 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/generalroboticslab/WildFusion.git
+    git clone https://github.com/generalroboticslab/HUMAC.git
     ```
-
-2. Create and activate a new virtual environment:
-
-    ```bash
-    virtualenv new_env_name
-    source new_env_name/bin/activate
-    ```
-
-3. Install the required dependencies:
+    
+2. Install the required dependencies:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-## Training
+## Collecting Data
 
 Run the following command to train the model. The `--scratch` flag will force training from scratch, while `--skip_plot` will skip saving training loss plots.
 
@@ -35,8 +28,14 @@ Run the following command to train the model. The `--scratch` flag will force tr
 python main.py --scratch --skip_plot
 ```
 
+## Training
+Run the following command to train the model. The `--scratch` flag will force training from scratch, while `--skip_plot` will skip saving training loss plots.
 
-## Evaluation
+```bash
+python main.py --scratch --skip_plot
+```
+
+## Testing Training Policy
 
 To evaluate the trained models and visualize the results, run:
 
@@ -57,4 +56,4 @@ Download our [dataset](https://duke.box.com/s/02algnthvx1fb3znt50cdpov7ehgseto) 
 The list of our hardware set and CAD model are under [hardwares](https://github.com/generalroboticslab/WildFusion/tree/main/hardwares) subdirectory.
 
 ## Acknowledgement
-[go2_ros2_sdk](https://github.com/abizovnuralem/go2_ros2_sdk)
+[DJI Robomaster_sdk](https://github.com/dji-sdk/RoboMaster-SDK)
