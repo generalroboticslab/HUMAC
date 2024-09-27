@@ -20,14 +20,14 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 
 Run the following command to collect heuristic data or human involve data.
 
-For simulation
+### simulation
 ```bash
 cd Simulation/crew-algorithms/crew_algorithms/
 export PYTHONPATH=..:$PYTHONPATH
 WANDB_MODE=disabled python collect_data envs.num_seekers=[num_seekers] envs.num_hiders=[num_hiders] envs.start_seed=[starting_seed] envs.num_games=[num_games]
 ```
 
-\textbf{Real-world}:
+### Real-world
 ```bash
 cd Real-World/Hide-and-Seek-real-robot/
 python collect_heuristic_data.py
@@ -36,13 +36,13 @@ python collect_heuristic_data.py
 ## Training
 Run the following command to train or fine-tune the model.
 
-For simulation
+### simulation
 ```bash
 cd Simulation/training/
 python train.py
 ```
 
-For real-world
+### real-world
 ```bash
 cd Real-World/training/
 python train.py 
@@ -52,14 +52,14 @@ python train.py
 
 To evaluate the trained models and visualize the results, run:
 
-For simulation
+### simulation
 ```bash
 cd Simulation/crew-algorithms/crew_algorithms/
 export PYTHONPATH=..:$PYTHONPATH
 WANDB_MODE=disabled python test envs.num_seekers=[num_seekers] envs.num_hiders=[num_hiders] envs.start_seed=[starting_seed] envs.num_games=[num_games]
 ```
 
-For Real-world
+### real-world
 
 ```bash
 cd Real-World/Hide-and-Seek-real-robot/
