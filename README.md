@@ -29,7 +29,7 @@ WANDB_MODE=disabled python collect_data envs.num_seekers=[num_seekers] envs.num_
 
 For Real-world
 ```bash
-cd cd Real-World/Hide-and-Seek-real-robot/
+cd Real-World/Hide-and-Seek-real-robot/
 python collect_heuristic_data.py
 ```
 
