@@ -1,0 +1,7 @@
+defaults:
+  - base_config
+  - envs: hide_and_seek
+  - _self_
+
+collector:
+  total_frames: 100000
