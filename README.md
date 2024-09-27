@@ -61,7 +61,7 @@ python train.py
 
 ## Evaluation
 
-To evaluate the trained models and visualize the results, run:
+To evaluate the trained models and log the performance, run:
 
 ### simulation
 ```bash
