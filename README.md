@@ -1,8 +1,7 @@
 # HUMAC: Enabling Multi-Robot Collaboration from Single-Human Guidance
 [Zhengran Ji](https://jzr01.github.io/)¹, [Lingyu Zhang](https://lingyu98.github.io/)¹, [Paul Sajda](https://liinc.bme.columbia.edu/people/paul-sajda)², [Boyuan Chen](http://boyuanchen.com/)¹
 
-¹ Duke University  
-² Columbia University
+¹ Duke University, ² Columbia University
 
 ![Multi-Agent/Robot Collaboration](images/Teaser.jpeg)
 
