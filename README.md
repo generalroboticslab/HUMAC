@@ -40,7 +40,7 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 ├── README.md           # Project overview and instructions
 └── LICENSE             # License for the project
 
-```plaintext
+```
 
 ## Acknowledgement
 [DJI Robomaster_sdk](https://github.com/dji-sdk/RoboMaster-SDK)
