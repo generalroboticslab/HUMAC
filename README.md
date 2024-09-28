@@ -31,8 +31,8 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 | **IL-Long+PE-H**            | 84.2±0.8     | 71.3±0.5     | 87.8±2.5     | 85.6±4.2     | 77.3±5.0     | 76.0±1.9     |
 | **IL-Long+PE-T**            | **89.3±2.0** | **72.2±3.3** | **91.3±2.4** | **94.9±1.4** | **83.1±1.7** | **86.2±0.6** |
 
+## Real-World Experiment Success Rate (%)
 <table>
-    <caption>Real-World Success Rate (success/total trials)</caption>
     <thead>
         <tr>
             <th>Setting</th>
