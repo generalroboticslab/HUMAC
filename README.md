@@ -39,7 +39,7 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
             <th>2v1</th>
             <th>2v2</th>
             <th colspan="2">3v2</th>
-            <th>3v3</th>
+            <th colspan="2">3v3</th>
         </tr>
     </thead>
     <tbody>
@@ -47,23 +47,25 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
             <td>Heuristic</td>
             <td>11/20</td>
             <td>10/20</td>
-            <th colspan="2"><td>13/20</td>
-            <th colspan="2"><td>11/20</td>
+            <td colspan="2">13/20</td>
+            <td colspan="2">11/20</td>
         </tr>
         <tr>
             <td>IL-Long</td>
             <td>10/20</td>
             <td>7/20</td>
-            <th colspan="2"><td>15/20</td>
-            <th colspan="2"><td>9/20</td>
+            <td colspan="2"><15/20</td>
+            <td colspan="2">9/20</td>
         </tr>
         <tr>
             <td>Combination</td>
             <td>1+1</td>
             <td>1+1</td>
             <td>2+1</td>
+            <td>1+2</td>
             <td>2+1</td>
             <td>1+2</td>
+            
         </tr>
         <tr>
             <td>IL-Long + PE-T</td>
