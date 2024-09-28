@@ -47,17 +47,15 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
             <td>Heuristic</td>
             <td>11/20</td>
             <td>10/20</td>
-            <td>13/20</td>
-            <td></td>
-            <td>11/20</td>
+            <th colspan="2"><td>13/20</td>
+            <th colspan="2"><td>11/20</td>
         </tr>
         <tr>
             <td>IL-Long</td>
             <td>10/20</td>
             <td>7/20</td>
-            <td>15/20</td>
-            <td></td>
-            <td>9/20</td>
+            <th colspan="2"><td>15/20</td>
+            <th colspan="2"><td>9/20</td>
         </tr>
         <tr>
             <td>Combination</td>
