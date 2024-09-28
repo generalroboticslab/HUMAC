@@ -11,14 +11,14 @@ WANDB_MODE=disabled python collect_data envs.num_seekers=[num_seekers] envs.num_
 ```
 
 ## Training 
-Run the following command to train or fine-tune the model.
+Run the following command to train the model.
 
 ```bash
 cd Simulation/training/
 python train.py
 ```
 ## Fine-tuning
-Run the following command to train or fine-tune the model.
+Run the following command to fine-tune the model.
 
 ```bash
 cd Simulation/training/
