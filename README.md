@@ -227,14 +227,15 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 
 
 
-## Prerequisites
+## Quick Start
 
 1. Clone the repository:
 
     ```bash
     git clone https://github.com/generalroboticslab/HUMAC.git
     ```
-2. Install [CREW](https://github.com/generalroboticslab/CREW) for simulation
+2. To run the simulation part of the paper
+    Install [CREW](https://github.com/generalroboticslab/CREW) for simulation
 
 3. Install dependency for real-robot
 
