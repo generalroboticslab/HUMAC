@@ -12,56 +12,11 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 ![Method](images/Mainfig.jpeg)
 
 ## Result
+### Simulation Success Rate (%)
 ![Method](Simulation.png)
 
-## Real-World Experiment Success Rate (%)
-<table style="text-align: center;">
-    <thead>
-        <tr>
-            <th style="text-align: center;">Setting</th>
-            <th style="text-align: center;">2v1</th>
-            <th style="text-align: center;">2v2</th>
-            <th colspan="2" style="text-align: center;">3v2</th>
-            <th colspan="2" style="text-align: center;">3v3</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="text-align: center;">Heuristic</td>
-            <td style="text-align: center;">11/20</td>
-            <td style="text-align: center;">10/20</td>
-            <td colspan="2" style="text-align: center;">13/20</td>
-            <td colspan="2" style="text-align: center;">11/20</td>
-        </tr>
-        <tr>
-            <td style="text-align: center;">IL-Long</td>
-            <td style="text-align: center;">10/20</td>
-            <td style="text-align: center;">7/20</td>
-            <td colspan="2" style="text-align: center;">15/20</td>
-            <td colspan="2" style="text-align: center;">9/20</td>
-        </tr>
-        <tr>
-            <td style="text-align: center;">Combination</td>
-            <td style="text-align: center;">1+1</td>
-            <td style="text-align: center;">1+1</td>
-            <td style="text-align: center;">2+1</td>
-            <td style="text-align: center;">1+2</td>
-            <td style="text-align: center;">2+1</td>
-            <td style="text-align: center;">1+2</td>
-        </tr>
-        <tr>
-            <td style="text-align: center;">IL-Long + PE-T</td>
-            <td style="text-align: center;"><strong>12/20</strong></td>
-            <td style="text-align: center;"><strong>11/20</strong></td>
-            <td style="text-align: center;"><strong>16/20</strong></td>
-            <td style="text-align: center;"><strong>17/20</strong></td>
-            <td style="text-align: center;"><strong>16/20</strong></td>
-            <td style="text-align: center;"><strong>16/20</strong></td>
-        </tr>
-    </tbody>
-</table>
-
-
+### Real-World Experiment Success Rate (%)
+![Method](real.png)
 
 
 ## Quick Start
