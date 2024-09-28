@@ -238,10 +238,16 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 
 3. To run the real-world experiment part of the paper, navigate to [Real-World](https://github.com/generalroboticslab/HUMAC/tree/main/Real-World) folder for detailed instructiom.
 
-   ```bash
-   pip install -r requirements.txt
-   ```
-    
+## Acknowledgement
+[DJI Robomaster_sdk](https://github.com/dji-sdk/RoboMaster-SDK)
+
+## Citation
+
+If you think this paper is helpful, please consider cite our work
+
+'''bash 
+'''
+
 ## Collecting Data
 
 Run the following command to collect heuristic data or human involve data.
@@ -292,5 +298,3 @@ cd Real-World/Hide-and-Seek-real-robot/
 python collect_heuristic_data.py
 ```
 
-## Acknowledgement
-[DJI Robomaster_sdk](https://github.com/dji-sdk/RoboMaster-SDK)
