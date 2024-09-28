@@ -31,6 +31,52 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 | **IL-Long+PE-H**            | 84.2±0.8     | 71.3±0.5     | 87.8±2.5     | 85.6±4.2     | 77.3±5.0     | 76.0±1.9     |
 | **IL-Long+PE-T**            | **89.3±2.0** | **72.2±3.3** | **91.3±2.4** | **94.9±1.4** | **83.1±1.7** | **86.2±0.6** |
 
+<table>
+    <thead>
+        <tr>
+            <th>Setting</th>
+            <th>2v1</th>
+            <th>2v2</th>
+            <th colspan="2">3v2</th>
+            <th>3v3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Heuristic</td>
+            <td>11/20</td>
+            <td>10/20</td>
+            <td>13/20</td>
+            <td></td>
+            <td>11/20</td>
+        </tr>
+        <tr>
+            <td>IL-Long</td>
+            <td>10/20</td>
+            <td>7/20</td>
+            <td>15/20</td>
+            <td></td>
+            <td>9/20</td>
+        </tr>
+        <tr>
+            <td>Combination</td>
+            <td>1+1</td>
+            <td>1+1</td>
+            <td>2+1</td>
+            <td>2+1</td>
+            <td>1+2</td>
+        </tr>
+        <tr>
+            <td>IL-Long + PE-T</td>
+            <td><strong>12/20</strong></td>
+            <td><strong>11/20</strong></td>
+            <td><strong>16/20</strong></td>
+            <td><strong>17/20</strong></td>
+            <td><strong>16/20</strong></td>
+        </tr>
+    </tbody>
+</table>
+
 
 ## Prerequisites
 
