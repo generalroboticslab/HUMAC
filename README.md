@@ -32,13 +32,17 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 
 ## Repo Structure
 ```plaintext
-├── /Simulation/              # Documentation files
-│   └── /crew-algorithm/
+├── /Simulation/              
+│   └── /crew-algorithms/
 │   └── /environment/
 │   └── /training/
-├── /Real-World/               # Source code for the project
-├── README.md           # Project overview and instructions
-└── LICENSE             # License for the project
+├── /Real-World/
+│   └── /environment/
+│   └── /training/
+├── /images/
+├── .gitignore              
+├── README.md           
+└── LICENSE             
 
 ```
 
