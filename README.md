@@ -33,11 +33,14 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 ## Repo Structure
 ```plaintext
 ├── /Simulation/              # Documentation files
-│   └── //
+│   └── /crew-algorithm/
+│   └── /environment/
+│   └── /training/
 ├── /Real-World/               # Source code for the project
 ├── README.md           # Project overview and instructions
 └── LICENSE             # License for the project
 
+```plaintext
 
 ## Acknowledgement
 [DJI Robomaster_sdk](https://github.com/dji-sdk/RoboMaster-SDK)
