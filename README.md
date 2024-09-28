@@ -234,10 +234,9 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
     ```bash
     git clone https://github.com/generalroboticslab/HUMAC.git
     ```
-2. To run the simulation part of the paper
-    Install [CREW](https://github.com/generalroboticslab/CREW) for simulation
+2. To run the simulation part of the paper, install [CREW](https://github.com/generalroboticslab/CREW). There are more detailed instruction in the [Simulation](https://github.com/generalroboticslab/HUMAC/tree/main/Simulation) folder.
 
-3. Install dependency for real-robot
+3. To run the real-world experiment part of the paper, navigate to [Real-World](https://github.com/generalroboticslab/HUMAC/tree/main/Real-World) folder for detailed instructiom.
 
    ```bash
    pip install -r requirements.txt
