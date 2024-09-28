@@ -30,7 +30,7 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 
 3. To run the real-world experiment part of the paper, navigate to [Real-World](https://github.com/generalroboticslab/HUMAC/tree/main/Real-World) folder for detailed instructiom.
 
-## Repo Structure
+## Repository Structure
 This repository has this following structure
 ```plaintext
 ├── Simulation              
