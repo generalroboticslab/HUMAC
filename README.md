@@ -54,7 +54,7 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
             <td>IL-Long</td>
             <td>10/20</td>
             <td>7/20</td>
-            <td colspan="2"><15/20</td>
+            <td colspan="2">15/20</td>
             <td colspan="2">9/20</td>
         </tr>
         <tr>
@@ -72,6 +72,7 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
             <td><strong>11/20</strong></td>
             <td><strong>16/20</strong></td>
             <td><strong>17/20</strong></td>
+            <td><strong>16/20</strong></td>
             <td><strong>16/20</strong></td>
         </tr>
     </tbody>
