@@ -245,8 +245,9 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 
 If you think this paper is helpful, please consider cite our work
 
-'''bash 
-'''
+    ```bash
+    git clone https://github.com/generalroboticslab/HUMAC.git
+    ```
 
 ## Collecting Data
 
