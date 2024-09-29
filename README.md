@@ -3,6 +3,8 @@
 
 ¹ Duke University, ² Columbia University
 
+[website](http://www.generalroboticslab.com/HUMAC),[paper](), [video]()
+
 ![Multi-Agent/Robot Collaboration](images/Teaser.jpeg)
 
 
