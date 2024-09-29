@@ -59,7 +59,6 @@ This work is supported by ARL STRONG program under awards W911NF2320182 and W911
 
 If you think this paper is helpful, please consider cite our work
 
-    ```bash
-    git clone https://github.com/generalroboticslab/HUMAC.git
-    ```
+```plaintext
+```
 
