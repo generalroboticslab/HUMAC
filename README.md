@@ -50,7 +50,10 @@ This repository has this following structure
 ```
 
 ## Acknowledgement
-[DJI Robomaster_sdk](https://github.com/dji-sdk/RoboMaster-SDK)
+
+```plaintext
+    This work is supported by ARL STRONG program under awards W911NF2320182 and W911NF2220113. We would also like to thank Jiaxun Liu for helping with the hardware setup.
+```
 
 ## Citation
 
