@@ -51,9 +51,9 @@ This repository has this following structure
 
 ## Acknowledgement
 
-```plaintext
-    This work is supported by ARL STRONG program under awards W911NF2320182 and W911NF2220113. We would also like to thank Jiaxun Liu for helping with the hardware setup.
-```
+
+This work is supported by ARL STRONG program under awards W911NF2320182 and W911NF2220113. We also thank [Jiaxun Liu](https://www.jiaxunliu.com/) for helping with the hardware setup.
+
 
 ## Citation
 
