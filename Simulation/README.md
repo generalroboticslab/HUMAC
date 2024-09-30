@@ -42,10 +42,10 @@ python Fine-tune.py
 
 ## Evaluation
 
-To evaluate the trained models and log the performance, run:
+To evaluate the trained models run:
 
 ```bash
 cd Simulation/crew-algorithms/crew_algorithms/
 export PYTHONPATH=..:$PYTHONPATH
-WANDB_MODE=disabled python test envs.num_seekers=[num_seekers] envs.num_hiders=[num_hiders] envs.start_seed=[starting_seed] envs.num_games=[num_games]
+WANDB_MODE=disabled python test envs.num_seekers=[num_seekers] envs.num_hiders=[num_hiders] envs.start_seed=[starting_seed] envs.num_games=[num_games] envs.base_policy=[base_policy_name] envs.addon_policy=[addon_policy_name] envs.num_seekers_with_policy=[num_seekers_with_base_policy]
 ```
