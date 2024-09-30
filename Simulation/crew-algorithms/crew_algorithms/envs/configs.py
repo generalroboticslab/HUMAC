@@ -18,11 +18,6 @@ class EnvironmentConfig:
     human_delay: int = 1
     no_graphics: bool = False
 
-    # if "Linux" in platform.system():
-    #     unity_server_build_path: Path = unity_server_build_path_linux
-    # elif "Darwin" in platform.system():
-    #     unity_server_build_path: Path = unity_server_build_path_osx
-
 @define(auto_attribs=True)
 class HideAndSeekConfig(EnvironmentConfig):
     name: str = "hide_and_seek"
@@ -31,11 +26,9 @@ class HideAndSeekConfig(EnvironmentConfig):
     start_seed: int = 1
     num_games: int = 150
     decision_frequency: float = 0.2
-    num_seekers_with_policy: int = 2
+    num_seekers_with_policy: int = 0
     base_policy: str = "Heuristic"
     addon_policy: str = "IL"
-    base_model_path: str= "../../model_weights/IL_resnet.pth"
-    addon_model_path: str = "../../model_weights/FT_team.pth"
 
     @property
     def num_player_args(self) -> list[str]:

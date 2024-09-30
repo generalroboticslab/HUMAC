@@ -8,6 +8,13 @@ from crew_algorithms.utils.wandb_utils import WandbConfig
 import os
 import time
 
+
+green = "\033[92m"
+red = "\033[91m"
+yellow = "\033[93m"
+blue = "\033[94m"
+reset = "\033[0m"
+
 @define(auto_attribs=True)
 class Config:
     envs: EnvironmentConfig = MISSING

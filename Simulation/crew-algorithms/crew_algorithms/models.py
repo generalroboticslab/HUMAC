@@ -8,6 +8,17 @@ import time
 from torchvision.models import resnet18
 import torch.nn.functional as F
 
+class Heuristic(nn.Module):
+    def __init__(self,num_of_frames,decision_frequency,num_of_seekers):
+        super(Heuristic, self).__init__()
+        self.num_of_frames = num_of_frames
+        self.num_of_frames_per_second= int(1/decision_frequency)
+        self.num_of_seekers = num_of_seekers
+
+    def forward(self, *input_tensor):
+        output = torch.zeros((self.num_of_seekers,2)).cuda() + 51.0
+        return output
+
 class IL(nn.Module):
     def __init__(self,num_of_frames,decision_frequency,num_of_seekers,max_teammate_num = 1):
         super(IL, self).__init__()
@@ -98,6 +109,26 @@ class IL(nn.Module):
                 
         return output
 
+class IL_Long(IL):
+    def __init__(self,num_of_frames,decision_frequency,num_of_seekers):
+        super(IL_Long, self).__init__(num_of_frames,decision_frequency,num_of_seekers)
+
+    def forward(self, *input_tensor):
+        return super(IL_Long, self).forward(*input_tensor)
+
+class IL_FT(IL):
+    def __init__(self,num_of_frames,decision_frequency,num_of_seekers):
+        super(IL_FT, self).__init__(num_of_frames,decision_frequency,num_of_seekers)
+
+    def forward(self, *input_tensor):
+        return super(IL_FT, self).forward(*input_tensor)
+
+class IL_Long_FT(IL):
+    def __init__(self,num_of_frames,decision_frequency,num_of_seekers):
+        super(IL_Long_FT, self).__init__(num_of_frames,decision_frequency,num_of_seekers)
+
+    def forward(self, *input_tensor):
+        return super(IL_Long_FT, self).forward(*input_tensor)
 
 class PE_H(nn.Module):
     def __init__(self,num_of_frames,decision_frequency,num_of_seekers):
@@ -303,35 +334,19 @@ class PE_N(nn.Module):
                 
         return output
 
-class FT(IL):
+
+class PE_T(IL):
     def __init__(self,num_of_frames,decision_frequency,num_of_seekers):
-        super(FT, self).__init__(num_of_frames,decision_frequency,num_of_seekers)
+        super(PE_T, self).__init__(num_of_frames,decision_frequency,num_of_seekers)
 
     def forward(self, *input_tensor):
-        return super(FT, self).forward(*input_tensor)
-
-
-class FT_Team(IL):
-    def __init__(self,num_of_frames,decision_frequency,num_of_seekers):
-        super(FT_Team, self).__init__(num_of_frames,decision_frequency,num_of_seekers)
-
-    def forward(self, *input_tensor):
-        return super(FT_Team, self).forward(*input_tensor)
-
-class Heuristic(nn.Module):
-    def __init__(self,num_of_frames,decision_frequency,num_of_seekers):
-        super(Heuristic, self).__init__()
-        self.num_of_frames = num_of_frames
-        self.num_of_frames_per_second= int(1/decision_frequency)
-        self.num_of_seekers = num_of_seekers
-
-    def forward(self, *input_tensor):
-        output = torch.zeros((self.num_of_seekers,2)).cuda() + 51.0
-        return output
+        return super(PE_T, self).forward(*input_tensor)
 
 class Mix(nn.Module):
     def __init__(self,base_policy,addon_policy,num_of_frames,decision_frequency,num_of_seekers):
         super(Mix, self).__init__()
+        base_policy = base_policy.replace("-","_")
+        addon_policy = addon_policy.replace("-","_")
         self.base_policy = eval(base_policy)(num_of_frames,decision_frequency,num_of_seekers)
         self.addon_policy = eval(addon_policy)(num_of_frames,decision_frequency,num_of_seekers)
         self.num_of_frames = num_of_frames

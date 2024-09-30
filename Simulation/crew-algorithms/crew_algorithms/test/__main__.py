@@ -52,10 +52,18 @@ def get_info(cfg: Config):
     base_policy = cfg['envs']['base_policy']
     global addon_policy
     addon_policy = cfg['envs']['addon_policy']
+
+    possible_policy ={"Heuristic","IL","IL-Long","IL-FT","IL-Long-FT","PE-N","PE-H","PE-T"}
+    if base_policy not in possible_policy:
+        raise ValueError(f"{red}Base policy {base_policy} is not in the possible policy list: {possible_policy}{reset}")
+    if addon_policy not in possible_policy:
+        raise ValueError(f"{red}Addon policy {addon_policy} is not in the possible policy list: {possible_policy}{reset}")
+
+
     global base_model_path
-    base_model_path = cfg['envs']['base_model_path']
+    base_model_path = f"../../model_weights/{cfg['envs']['base_policy']}.pth"
     global addon_model_path
-    addon_model_path = cfg['envs']['addon_model_path']
+    addon_model_path = f"../../model_weights/{cfg['envs']['addon_policy']}.pth"
     
     
 @hydra.main(version_base=None, config_path="../conf", config_name="Build")
@@ -96,30 +104,18 @@ def test(cfg: Config):
         print(f"{green}Base model is Heuristic{reset}")
     
     #load addon model weights
-    if addon_model_path.find("_split_") == -1:
-        if addon_model_path != "" and os.path.exists(addon_model_path):
-            weights = torch.load(addon_model_path)['model_state_dict']    
-            model.addon_policy.load_state_dict(weights)
-            print(f"{green}Addon Policy Weights Loaded{reset}")
-        else:
-            print(f"{red}Addon model is empty{reset}")
-    else:
-        addon_model_path_list = addon_model_path.split("_split_")
-        teammate_path = addon_model_path_list[0]
-        self_path = addon_model_path_list[1]
-        
-        teammate_weight = torch.load(teammate_path)['model_state_dict']
-        model.addon_policy.teammate_prediction_model.load_state_dict(teammate_weight )
 
-
-        model.addon_policy.load_state_dict(torch.load(self_path)['model_state_dict'],strict=False)
+    if addon_model_path != "" and os.path.exists(addon_model_path):
+        weights = torch.load(addon_model_path)['model_state_dict']    
+        model.addon_policy.load_state_dict(weights)
         print(f"{green}Addon Policy Weights Loaded{reset}")
-
+    else:
+        print(f"{red}Addon model is empty{reset}")
 
     print("\n")
 
     #set up the directory
-    base_directory = f"../../{num_seekers}Seeker({num_seekers - num_seekers_with_policy}+{num_seekers_with_policy})_vs_{num_hiders}Hider_{base_model_path.split('/')[-1][:-4]}+{addon_model_path.split('/')[-1][:-4]}"
+    base_directory = f"../../test_result/{base_model_path.split('/')[-1][:-4]}+{addon_model_path.split('/')[-1][:-4]}/{num_seekers}Seeker({num_seekers - num_seekers_with_policy}+{num_seekers_with_policy})_vs_{num_hiders}Hider"
     
     if not os.path.exists(base_directory):
         os.makedirs(base_directory)
@@ -154,13 +150,13 @@ def test(cfg: Config):
             done = data['next','agents','done'][0][0].item()
 
             if last_hider_num - hider_left > 0:
-                episode_time = round((step+1)*decision_frequency,1)
+                episode_time = round((step)*decision_frequency,1)
                 time_list.append(episode_time)
             last_hider_num = hider_left
             
             if done:
                 for _ in range (num_hiders - len(time_list)):
-                    episode_time = round((step+1)*decision_frequency,1)
+                    episode_time = round((step)*decision_frequency,1)
                     time_list.append(episode_time)
                 
                 with open(file_path, 'a') as file:
