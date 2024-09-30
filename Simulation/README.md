@@ -70,4 +70,5 @@ Below is a description of each configuration option:
 
 </div>
 
+All the testing result will be logged to the folder test_results
 
