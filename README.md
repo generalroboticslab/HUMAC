@@ -15,10 +15,10 @@ Learning collaborative behaviors is essential for multi-agent systems. Tradition
 
 ## Result
 ### Simulation Success Rate (%)
-![Method](Simulation.png)
+![Method](images/Simulation.png)
 
 ### Real-World Experiment Success Rate (%)
-![Method](real.png)
+![Method](images/real.png)
 
 
 ## Quick Start
