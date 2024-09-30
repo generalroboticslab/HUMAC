@@ -11,7 +11,7 @@ WANDB_MODE=disabled python collect_data envs.num_seekers=[num_seekers] envs.num_
 ```
 <div style="background-color:#f0f0f0; padding:10px; border-radius:5px;">
 
-In this game, the configuration options control key aspects of the simulation. Below is a description of each configuration option:
+Below is a description of each configuration option:
 
 - **`num_seekers`**: Specifies the number of seekers in the game. Seekers are agents tasked with finding the hiders.
 
@@ -22,6 +22,9 @@ In this game, the configuration options control key aspects of the simulation. B
 - **`num_games`**: The total number of games or rounds to be played during data collection. Increasing this number allows for more extensive data to be gathered.
 
 </div>
+
+All the data will be collected to the folder.
+
 ## Training 
 Run the following command to train the model.
 
