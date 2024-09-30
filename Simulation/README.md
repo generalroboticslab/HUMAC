@@ -62,11 +62,11 @@ Below is a description of each configuration option:
 
 - **`num_games`**: The total number of games or rounds to be played during data collection. Increasing this number allows for more extensive data to be gathered.
 
-- **`base_policy_name**: The basic policy that the seekers are controlled by. The popular choices are "Heuristic", "IL", and "IL-Long". The configiration must be one of the follwing {Heuristic", "IL", "IL-Long","IL-FT","IL-Long-FT","PE-N","PE-H","PE-T"}
+- **`base_policy_name`**: The basic policy that the seekers are controlled by. The popular choices are "Heuristic", "IL", and "IL-Long". The configiration must be one of the follwing {Heuristic", "IL", "IL-Long","IL-FT","IL-Long-FT","PE-N","PE-H","PE-T"}
 
-- **`addon_policy_name**: The add-on policy that the seekers are controlled by. The configiration must be one of the follwing {Heuristic", "IL", "IL-Long","IL-FT","IL-Long-FT","PE-N","PE-H","PE-T"}
+- **`addon_policy_name`**: The add-on policy that the seekers are controlled by. The configiration must be one of the follwing {Heuristic", "IL", "IL-Long","IL-FT","IL-Long-FT","PE-N","PE-H","PE-T"}
 
-- **`num_seekers_with_addon_policy**: The number of seekers with add on policy. The rest will be controlled by base policy. 
+- **`num_seekers_with_addon_policy`**: The number of seekers with add on policy. The rest will be controlled by base policy. 
 
 </div>
 ```
