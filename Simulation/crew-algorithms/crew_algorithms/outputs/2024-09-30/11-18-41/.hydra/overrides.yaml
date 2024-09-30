@@ -1,0 +1,7 @@
+- envs.num_seekers=2
+- envs.num_hiders=1
+- envs.start_seed=1
+- envs.num_games=3
+- envs.base_policy=IL-Long
+- envs.addon_policy=PE-T
+- envs.num_seekers_with_policy=1

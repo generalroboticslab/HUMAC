@@ -57,12 +57,6 @@ def collect_data(cfg: Config) -> None:
         save_images,
     )
     from crew_algorithms.utils.rl_utils import make_collector
-    
-    # seed_path = "random_seed_map.txt"
-    # with open(seed_path, 'r') as file:
-    #     first_line = file.readline().strip()  # Read the first line and remove whitespace
-    
-    # random_seed = int(first_line)
    
     device = "cpu" if not torch.cuda.is_available() else "cuda:0"
     toggle_timestep_channel = ToggleTimestepChannel(uuid.uuid4())
@@ -73,8 +67,7 @@ def collect_data(cfg: Config) -> None:
     policy = make_agent('cuda',num_seekers)
     
 
-    # collector = make_collector(cfg.collector, env_fn, policy, device)
-    
+
     step = 0
     
     seed_list = range(start_seed,start_seed+num_games+1)
@@ -105,13 +98,6 @@ def collect_data(cfg: Config) -> None:
                 total_data += batch*num_seekers
                 print(f"{red}{num_seekers} Seekers{reset} VS {green}{num_hiders} Hiders{reset}, Num of test: {yellow}{total_game}/{num_games}{reset}, Total Data Collected: {total_data}")
                 break
-            
-            # if total_game_current_batch == min(max_game_per_batch,num_games_left):
-            #     collector.shutdown()
-            #     total_game_current_batch = 0
-            #     num_games_left -= min(max_game_per_batch, num_games_left)
-            #     break
-                
                 
 
     print("Collect Data Finished")
@@ -125,6 +111,7 @@ if __name__ == "__main__":
         pass
     with open(file_path, 'a') as file:
         for i in range(start_seed, num_games+start_seed):
+            file.write(str(i) + '\n')
             file.write(str(i) + '\n')
     
     collect_data()
