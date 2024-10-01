@@ -9,13 +9,15 @@ from torchvision import transforms
 torch.manual_seed(42)
 
 class HideandSeekDataset(Dataset):
-   def __init__(self,folder_name,seeker_id,num_seekers,num_of_frame = 5,max_seeker_number=4,transform=transforms.ToTensor()):
+   def __init__(self,folder_name,seeker_id,num_seekers,max_seeker_number,num_of_frame = 5,transform=transforms.ToTensor(),step_ahead=5,teammate_only=True):
       self.num_of_frame = num_of_frame
       self.folder_name = folder_name
       self.seeker_id = seeker_id
       self.transform = transform
       self.max_seeker_number = max_seeker_number
       self.num_seekers = num_seekers
+      self.step_ahead = step_ahead
+      self.teammate_only = teammate_only
 
       #check if the dataset matching
       image_folder = self.folder_name+f"/observation/agent_{self.seeker_id}"
@@ -96,6 +98,7 @@ class HideandSeekDataset(Dataset):
       
       #sort the images files based on the step number
       self.image_files = sorted(self.image_files, key= lambda x: int(x.split('/')[-1][:-4]))
+      self.image_files = self.image_files[:self.num_of_frame-self.step_ahead+1]
 
    def __len__(self):
       return (len(self.image_files))
@@ -120,12 +123,16 @@ class HideandSeekDataset(Dataset):
       if self.transform:
          obs = self.transform(obs)
       ind = int(file_name.split('/')[-1][:-4])
+      ind1 = ind + self.step_ahead-1
 
-      action = torch.zeros((2*self.max_seeker_number,1))
-      # print(len(self.action_list))
-      # print(len(self.image_files))
-      for i in range(len(action)):
-         action[i,:] = self.action_list[ind][i]
+      if self.teammate_only:
+         action = torch.zeros((2*self.max_seeker_number-2,1))
+         for i in range(len(action)):
+            action[i,:] = self.action_list[ind1][i+2]
+      else:
+         action = torch.zeros((2*self.max_seeker_number,1))
+         for i in range(len(action)):
+            action[i,:] = self.action_list[ind1][i]
       
       position = torch.zeros((2,1))
       for i in range(len(position)):
@@ -140,7 +147,8 @@ class HideandSeekDataset(Dataset):
       flipped = False
       for j in range(x-3,x+4):
          for m in range(y-3,y+4):
-            
+            if j < 0 or j >= 156 or m < 0 or m >= 156:
+               continue
             if obs[0,j,m] >= 0.85 and obs[1,j,m] <= 0.22 and obs[2,j,m] <= 0.22:
                binary_mask[:,j,m] = 1
                flipped = True
@@ -196,7 +204,7 @@ class HideandSeekDataset(Dataset):
          if (i == num_of_frame):
             for j in range(self.max_seeker_number):
                try:
-                  if action[2*j] != 500:
+                  if action[2*j] != 50:
                      alpha = 1 - j / self.max_seeker_number
                      axs[0,i-1].scatter(action[2*j], action[2*j+1], c='orange', marker='+', s=20,alpha = alpha)
                except:
@@ -207,6 +215,6 @@ class HideandSeekDataset(Dataset):
          img_height, img_width = (57.98,58.18)
          extent = [-img_width / 2, img_width / 2, -img_height / 2, img_height / 2]
          axs[1,i-1].imshow(binary_mask, extent=extent, cmap='gray')
-      plt.savefig("example.jpg",dpi = 1200)
+      plt.savefig("example.jpg",dpi = 400)
 
 

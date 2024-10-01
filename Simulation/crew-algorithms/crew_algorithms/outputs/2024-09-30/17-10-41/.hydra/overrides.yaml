@@ -1,0 +1,6 @@
+- envs.num_seekers=2
+- envs.num_hiders=1
+- envs.start_seed=3
+- envs.num_games=2
+- envs.decision_frequency=0.2
+- envs.time_scale=8

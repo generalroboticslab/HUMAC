@@ -11,6 +11,9 @@ from crew_algorithms.envs.channels import ToggleTimestepChannel, WrittenFeedback
 from crew_algorithms.envs.configs import EnvironmentConfig
 from crew_algorithms.envs.unity import UnityEnv
 from crew_algorithms.utils.common_utils import find_free_port
+from mlagents_envs.side_channel.engine_configuration_channel import (
+    EngineConfigurationChannel,
+)
 
 
 def make_base_env(
@@ -64,6 +67,18 @@ def make_base_env(
             "-WrittenFeedbackChannelID",
             str(written_feedback_channel.channel_id),
         ]
+
+    engine_configuration_channel = EngineConfigurationChannel()
+    side_channels.append(engine_configuration_channel)
+
+    if env_cfg.time_scale > 1.0:
+        engine_configuration_channel.set_configuration_parameters(
+            width=900,
+            height=600,
+            quality_level=10,
+            time_scale=env_cfg.time_scale,
+            target_frame_rate=50,
+        ) 
 
     base_env = UnityEnv(
         str(env_cfg.unity_server_build_path),

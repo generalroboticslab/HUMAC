@@ -29,6 +29,7 @@ class HideAndSeekConfig(EnvironmentConfig):
     num_seekers_with_policy: int = 0
     base_policy: str = "Heuristic"
     addon_policy: str = "IL"
+    time_scale: float = 1.0
 
     @property
     def num_player_args(self) -> list[str]:
@@ -38,8 +39,6 @@ class HideAndSeekConfig(EnvironmentConfig):
             "-NumSeekers",
             f"{self.num_seekers}",
         ]
-
-
 
 def register_env_configs() -> None:
     cs = ConfigStore.instance()

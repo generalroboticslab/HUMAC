@@ -9,15 +9,15 @@ from torchvision import transforms
 torch.manual_seed(42)
 
 class HideandSeekDataset(Dataset):
-   def __init__(self,folder_name,num_seekers,seeker_id,num_of_frame = 5,transform=transforms.ToTensor(),human_control = True,collect_decision_freqeuncy=0.2,train_decision_frequency=1):
+   def __init__(self,folder_name,num_seekers,seeker_id,num_of_frame = 5,transform=transforms.ToTensor(),human_control = True,collect_decision_freqeuncy=0.2,step_ahead=5):
       self.num_of_frame = num_of_frame
       self.folder_name = folder_name
       self.seeker_id = seeker_id
       self.transform = transform
       self.human_control = human_control
       self.collect_decision_freqeuncy = collect_decision_freqeuncy
-      self.train_decision_frequency = train_decision_frequency
       self.num_seekers = num_seekers
+      self.step_ahead = step_ahead
 
       #check if the dataset matching
       image_folder = self.folder_name+f"/observation/agent_{self.seeker_id}"
@@ -62,7 +62,7 @@ class HideandSeekDataset(Dataset):
          
       # self.action_list.append(self.action_list[-1])
       self.image_files = sorted(self.image_files, key= lambda x: int(x.split('/')[-1][:-4].replace('H', '')))
-      self.image_files = self.image_files[:len(self.image_files)-int(self.train_decision_frequency/self.collect_decision_freqeuncy)+1]
+      self.image_files = self.image_files[:len(self.image_files)-self.step_ahead+1]
 
 
       if human_control:
@@ -101,7 +101,7 @@ class HideandSeekDataset(Dataset):
          obs = self.transform(obs)
       ind = int(file_name.split('/')[-1][:-4].replace("H",""))
 
-      ind1 = ind + int(self.train_decision_frequency/self.collect_decision_freqeuncy)-1
+      ind1 = ind + self.step_ahead-1
 
       action = torch.zeros((2,1))
       for i in range(len(action)):
@@ -120,9 +120,10 @@ class HideandSeekDataset(Dataset):
       flipped = False
       for j in range(x-3,x+4):
          for m in range(y-3,y+4):
+            if j < 0 or j >= 156 or m < 0 or m >= 156:
+               continue
             
             if obs[0,j,m] >= 0.85 and obs[1,j,m] <= 0.22 and obs[2,j,m] <= 0.22:
-
                binary_mask[:,j,m] = 1
                flipped = True
       
