@@ -108,7 +108,7 @@ def train(model,
 
         if average_val_loss < best_val_loss:
             best_val_loss = average_val_loss
-            checkpoint_path = os.path.join(checkpoint_dir, f'model_epoch{epoch+1}.pth')
+            checkpoint_path = os.path.join(checkpoint_dir, f'model.pth')
             torch.save({
                 'epoch': epoch,
                 'model_state_dict': model.state_dict(),
@@ -278,7 +278,7 @@ def load_data_IL(num_of_frames,root_folder,step_ahead=5):
 
             total_episode += 1
 
-        print(f"{folder.name}, Total Episode: {total_episode}, Seeker Success Rate:{1 - total_fail/total_episode/num_seekers:.2f}")
+        # print(f"{folder.name}, Total Episode: {total_episode}, Seeker Success Rate:{1 - total_fail/total_episode/num_seekers:.2f}")
     return all_data
 
 
@@ -306,7 +306,7 @@ def load_data_team(num_of_frames,num_seekers_max,root_folder,step_ahead=5,teamma
                     all_data = dataset
             total_episode += 1
 
-        print(f"{folder.name}, Total Episode: {total_episode}, Seeker Success Rate:{1 - total_fail/total_episode/num_seekers:.2f}")
+        # print(f"{folder.name}, Total Episode: {total_episode}, Seeker Success Rate:{1 - total_fail/total_episode/num_seekers:.2f}")
     return all_data
 
 
@@ -353,7 +353,8 @@ def load_data_human(num_of_frames,root_folder,step_ahead=5):
 
             total_frames += dataset.total_len()
 
-        print(f"{folder.name}, Total Episode: {total_episode}, Seeker Success Rate:{1 - total_fail/total_episode/num_seekers:.2f}")
+        # print(f"{folder.name}, Total Episode: {total_episode}, Seeker Success Rate:{1 - total_fail/total_episode/num_seekers:.2f}")
     
     return all_data,all_data1
-        
+
+

@@ -182,7 +182,7 @@ class HideandSeekDataset(Dataset):
       obs = torch.cat(obs_list, 0)
       _,action, position = self.get(ind)
 
-      return obs, action, position
+      return obs, action, position, self.num_seekers
 
 
    def plot(self,index):

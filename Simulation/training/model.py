@@ -39,7 +39,7 @@ class PE_N(nn.Module):
         
         self.fc4 = nn.Linear(max_num_teammate*2, 128)
 
-        self.teammate_prediction = IL(num_of_frames)
+        self.teammate_prediction = IL(num_of_frames,num_seekers=max_num_teammate)
         
 
     def forward(self, x):
@@ -80,9 +80,9 @@ class PE_H(nn.Module):
         x = self.fc3(x)
         return x
 
-def PE_T(IL):
-    def __init__(self,num_of_frames,num_seekers=1):
-        super(PE_T, self).__init__(num_of_frames,num_seekers)
+# def PE_T(IL):
+#     def __init__(self,num_of_frames,num_seekers):
+#         super(PE_T, self).__init__(num_of_frames,num_seekers = num_seekers)
 
-    def forward(self, *input_tensor):
-        return super(PE_T, self).forward(*input_tensor)
+#     def forward(self, *input_tensor):
+#         return super(PE_T, self).forward(*input_tensor)
