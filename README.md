@@ -60,5 +60,14 @@ This work is supported by ARL STRONG program under awards W911NF2320182 and W911
 If you think this paper is helpful, please consider cite our work
 
 ```plaintext
+@misc{ji2024enablingmultirobotcollaborationsinglehuman,
+      title={Enabling Multi-Robot Collaboration from Single-Human Guidance}, 
+      author={Zhengran Ji and Lingyu Zhang and Paul Sajda and Boyuan Chen},
+      year={2024},
+      eprint={2409.19831},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2409.19831}, 
+}
 ```
 
