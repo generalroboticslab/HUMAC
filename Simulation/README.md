@@ -3,10 +3,10 @@
 Our simulation can only Linux machine with [CREW](https://generalroboticslab.github.io/crew-docs/) correctly setup.
 
 ## Download Game Builds
-Please download the game builds [here]() and put them into the folder of 
+Please download the game builds [here]() and put them into the folder:
 
 ```bash
-
+HUMAC/Simulation/environment/Crew version/crew-dojo/Builds
 ```
 
 
