@@ -1,5 +1,15 @@
 # Simulation
 
+Our simulation can only Linux machine with [CREW](https://generalroboticslab.github.io/crew-docs/) correctly setup.
+
+## Download Game Builds
+Please download the game builds [here]() and put them into the folder of 
+
+```bash
+
+```
+
+
 ## Collecting Data
 
 Run the following command to collect heuristic data control.
