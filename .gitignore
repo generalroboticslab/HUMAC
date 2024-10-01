@@ -9,6 +9,9 @@ __pycache__/
 Data_heuristic/
 Data_human/
 
+#things inside model_weights
+model_weights/*
+
 #pycache
 __pycache__/
 
