@@ -9,7 +9,6 @@ Please download the game builds [here]() and put them into the folder:
 HUMAC/Simulation/environment/Crew version/crew-dojo/Builds
 ```
 
-
 ## Collecting Data
 
 Run the following command to collect heuristic data control.
