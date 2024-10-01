@@ -40,6 +40,8 @@ def get_info(cfg: Config) -> None:
     start_seed = cfg['envs']['start_seed']
     global num_games 
     num_games = cfg['envs']['num_games']
+    global data_folder
+    data_folder = cfg['envs']['data_folder']
 
 
 @hydra.main(version_base=None, config_path="../conf", config_name="Build")
@@ -77,7 +79,7 @@ def collect_data(cfg: Config) -> None:
     while total_game < num_games:
     #make the collector
         random_seed = seed_list[total_game]
-        base_directory = f"../../Data_heuristic/{num_seekers}Seeker_vs_{num_hiders}Hider/Seed={random_seed}/"
+        base_directory = f"../../{data_folder}/{num_seekers}Seeker_vs_{num_hiders}Hider/Seed={random_seed}/"
         
         collector = make_collector(cfg.collector, env_fn, policy, device)
         
@@ -99,7 +101,6 @@ def collect_data(cfg: Config) -> None:
                 print(f"{red}{num_seekers} Seekers{reset} VS {green}{num_hiders} Hiders{reset}, Num of test: {yellow}{total_game}/{num_games}{reset}, Total Data Collected: {total_data}")
                 break
                 
-
     print("Collect Data Finished")
 
 if __name__ == "__main__":

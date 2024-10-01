@@ -120,7 +120,17 @@ def train(model,
     return train_loss,val_loss_list
 
 
-def fine_tune(model,num_epochs,device,train_loader,val_loader,old_train_loader,old_val_loader,criterion,optimizer,checkpoint_dir,ratio):
+def fine_tune(model,
+            num_epochs,
+            device,
+            train_loader,
+            val_loader,
+            old_train_loader,
+            old_val_loader,
+            criterion,
+            optimizer,
+            checkpoint_dir,
+            ratio):
     run = wandb.init(
         # set the wandb project where this run will be logged
         project="Multi-agent-HS",
@@ -156,13 +166,13 @@ def fine_tune(model,num_epochs,device,train_loader,val_loader,old_train_loader,o
             if counter > len(train_loader):
                 break
 
-            images1, targets1,_ = train_data
+            images1, targets1,_,_ = train_data
             images, targets = images1.to(device), targets1.to(device)
             outputs = model(images)
             new_loss = criterion(outputs, targets.squeeze())
 
 
-            old_images1, old_targets1,_ = old_train_data
+            old_images1, old_targets1,_,_ = old_train_data
             old_images, old_targets = old_images1.to(device), old_targets1.to(device)
             old_outputs = model(old_images)
             old_loss = criterion(old_outputs, old_targets.squeeze())
@@ -205,8 +215,8 @@ def fine_tune(model,num_epochs,device,train_loader,val_loader,old_train_loader,o
             for val_data,old_val_data in big_val_loader:
                 if val_data is None:
                     break
-                images2, targets2,_ =  val_data
-                images3, targets3,_ =  old_val_data
+                images2, targets2,_,_ =  val_data
+                images3, targets3,_,_ =  old_val_data
 
                 images1, targets1 = images2.to(device), targets2.to(device)
                 outputs1 = model(images1)
@@ -324,8 +334,7 @@ def load_data_human(num_of_frames,root_folder,step_ahead=5):
 
         for seed_num in os.scandir(base_folder):
             for agent_id in range(num_seekers):
-                dataset = HideandSeekDataset.HideandSeekDataset(os.path.join(base_folder,seed_num.name),num_seekers,agent_id, human_control=True,step_ahead=step_ahead)
-                
+                dataset = HideandSeekDataset_Human.HideandSeekDataset(os.path.join(base_folder,seed_num.name),num_seekers,agent_id, human_control=True,step_ahead=step_ahead)
                 total_fail += int(dataset.is_seeker_fail())
                 
                 if (dataset.have_missing_agent()):
@@ -335,26 +344,23 @@ def load_data_human(num_of_frames,root_folder,step_ahead=5):
                 except:
                     all_data = dataset
                 
-                dataset1 = HideandSeekDataset.HideandSeekDataset(os.path.join(base_folder,seed_num.name),num_seekers,agent_id, human_control=False,step_ahead=step_ahead)
-                
+                dataset1 = HideandSeekDataset_Human.HideandSeekDataset(os.path.join(base_folder,seed_num.name),num_seekers,agent_id, human_control=False,step_ahead=step_ahead)
                 total_fail += int(dataset1.is_seeker_fail())
                 
                 if (dataset1.have_missing_agent()):
                     print(f"{folder.name},{seed_num.name},{agent_id} has missing data")
-
                 
                 try:
                     all_data1 = ConcatDataset([all_data1,dataset1])
                 except:
                     all_data1 = dataset1
 
-
             total_episode += 1
 
             total_frames += dataset.total_len()
 
-        # print(f"{folder.name}, Total Episode: {total_episode}, Seeker Success Rate:{1 - total_fail/total_episode/num_seekers:.2f}")
+        print(f"{folder.name}, Total Episode: {total_episode}, Seeker Success Rate:{1 - total_fail/total_episode/num_seekers:.2f}")
     
-    return all_data,all_data1
+    return all_data , all_data1
 
 

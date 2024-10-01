@@ -98,15 +98,26 @@ with open(team_save_base_directory+'/team_prediction_training_result.json', 'w')
     json.dump(training_result, f)
 
 model = IL(args.num_of_frames)
+original_weights = model.resnet18.conv1.weight.data.to(device)
+
 team_weights = torch.load(team_save_base_directory+'/model.pth')["model_state_dict"]
+target_weights = team_weights['resnet18.conv1.weight']
+
 update_weights = {}
 for key in team_weights.keys():
     if 'fc' not in key:  # Skip the fully connected layers (keys that contain 'fc')
         update_weights[key] = team_weights[key].to(device)
 
 model.load_state_dict(update_weights, strict=False)
+loaded_weights = model.resnet18.conv1.weight.data.to(device)
+
+if torch.equal(target_weights, loaded_weights):
+    print(f"{green}Weights successfully loaded{reset}")
+else:
+    print(f"{red}Weights not loaded correctly{reset}")
+
 optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=learning_rate)
-save_base_directory = f"../model_weights/PE_T"
+save_base_directory = f"../model_weights/pre_PE_T"
 
 t_l,v_l = train(model,
           args.epochs,

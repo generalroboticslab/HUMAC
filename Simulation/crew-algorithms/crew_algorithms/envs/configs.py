@@ -30,6 +30,7 @@ class HideAndSeekConfig(EnvironmentConfig):
     base_policy: str = "Heuristic"
     addon_policy: str = "IL"
     time_scale: float = 1.0
+    data_folder: str = "Data_heuristic"
 
     @property
     def num_player_args(self) -> list[str]:

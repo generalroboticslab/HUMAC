@@ -27,7 +27,7 @@ class IL(nn.Module):
         return x
 
 class PE_N(nn.Module):
-    def __init__(self, num_of_frames,num_seekers=1,max_num_teammate=3):
+    def __init__(self, num_of_frames,max_num_teammate=3):
         super(PE_N, self).__init__()
         self.resnet18 = resnet18(pretrained=False)
         self.resnet18.conv1 = nn.Conv2d(4 * num_of_frames, 64, kernel_size=7, stride=2, padding=3, bias=False)
@@ -35,7 +35,7 @@ class PE_N(nn.Module):
         
         self.fc1 = nn.Linear(512, 128)  # First FC layer
         self.fc2 = nn.Linear(256, 128)        # Second FC layer
-        self.fc3 = nn.Linear(128, 2*num_seekers)          # Third FC layer, output 3 classes
+        self.fc3 = nn.Linear(128, 2)          # Third FC layer, output 3 classes
         
         self.fc4 = nn.Linear(max_num_teammate*2, 128)
 

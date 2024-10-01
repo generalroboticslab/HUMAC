@@ -104,7 +104,7 @@ teammate_weights = torch.load(teammate_save_base_directory+"/model.pth")["model_
 model.teammate_prediction.load_state_dict(teammate_weights,strict=True)
 
 optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=learning_rate)
-save_base_directory = f"../model_weights/PE_N"
+save_base_directory = f"../model_weights/pre_PE_N"
 
 t_l,v_l = train(model,
           args.epochs,
