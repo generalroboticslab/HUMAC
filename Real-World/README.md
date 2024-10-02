@@ -64,6 +64,9 @@ cd Real-World/environment/
 python collect_heuristic_data.py  
 ```
 
+The prompt will be like this 
+
+![Step1](image/step1.png)
 
 
 
