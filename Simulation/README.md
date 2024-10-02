@@ -40,9 +40,9 @@ Below is a description of each configuration option:
 
 - **`num_games`**: The total number of games or rounds to be played during data collection. Increasing this number allows for more extensive data to be gathered.
 
--**`\path\to\save\data`**: Path to save the dataset.
+- **`\path\to\save\data`**: Path to save the dataset.
 
--**`time_scale`**: The time scale of the simulation. For collecting heuristic data, the time scale is recommended to be <= 6. For collecting human guidance data, it is recommended to be <= 2.
+- **`time_scale`**: The time scale of the simulation. For collecting heuristic data, the time scale is recommended to be <= 6. For collecting human guidance data, it is recommended to be <= 2.
 </div>
 
 
