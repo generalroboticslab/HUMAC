@@ -79,18 +79,17 @@ To train any of the policies, follow the steps below:
     - **`--num_of_frames`**: The number of frames to stack (default: 5).
     - **`--step_ahead`**: The number of steps ahead for prediction. Setting step_ahead to be 1 is training IL, and making it > 1 is predicting longer than 1 step which refers to IL-Long in the paper.
     - **`--data_root_folder`**: The root folder path for the dataset (default: "path/to/IL/data").
-      
+
+All the models will be saved under the model_weights folder. 
+
 5. **Fine-tuning**:
-    You can fine-tune any of the pre-trained models by reducing the learning rate and adjusting other hyperparameters. Modify the command-line arguments to tailor the fine-tuning process based on your requirements. For example:
+    
     **`WANDB_MODE=disabled python train_PE_N.py --seed_value 42 --batch_size 64 --learning_rate 0.0001 --epochs 50 --num_of_frames 5 --step_ahead 5 --data_root_folder "path/to/PE-N/data"`**
 
     In this example, the learning rate is reduced for fine-tuning, and the batch size is decreased for more fine-grained updates.
 
 ### Notes:
 - **Weights & Biases (WandB)**: If you're using [WandB](https://wandb.ai/), ensure you set **`WANDB_MODE=online`** and have your API key configured. If you want to disable it, you can use **`WANDB_MODE=disabled`** as shown in the examples.
-- **Dataset Path**: Ensure that the **`--data_root_folder`** points to the correct path where your dataset is stored for each policy.
-- **GPU/CPU Setup**: By default, the script should automatically utilize available GPUs. If you want to enforce CPU training, you may need to modify the script.
-
 
 ## Evaluation
 
