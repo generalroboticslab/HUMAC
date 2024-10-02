@@ -29,6 +29,8 @@ cd Real-World
 python3 environment/connect_robot_to_wifi.py 
 ```
 
+After successfully connecting to wifi, there will be a prompt in the terminal, as well as a sound from the speaker of the robot.
+
 
 ## Collecting Data
 
