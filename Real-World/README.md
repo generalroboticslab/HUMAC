@@ -6,6 +6,8 @@
 
 [Robot](https://www.dji.com/robomaster-ep)
 
+[RGB Camera]()
+
 ## Install the dependency 
 ```bash
 cd Real-World
@@ -59,8 +61,10 @@ Run the following command to start the process:
 
 ```bash
 cd Real-World/environment/
-python connect/collect_heuristic_data.py  
+python collect_heuristic_data.py  
 ```
+
+
 
 
 ### Human Data
