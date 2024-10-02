@@ -20,8 +20,23 @@ source devel/setup.sh
 roslaunch vicon_bridge vicon.launch
 ```
 
-## Rename Robot and Prepare the Json File
+## Name Robot and Prepare the Json File
 
+The key is the ip address of the robot, and the value is a list with [Unique ID on robot smart controller, agent name]. Please save the json file as robot_info.json into the folder:
+
+```plaintext
+HUMAC\Real-World\environment\
+```
+An example robot_info.json will be like:
+
+```plaintext
+{"192.168.0.121":["159CKCH0070FA2","Seeker1"],
+"192.168.0.117":["159CL170070G5F","Seeker2"],
+"192.168.0.116":["159CL170070G26","Seeker3"],
+"192.168.0.118":["159CL170070FZU","Hider1"],
+"192.168.0.122":["159CKCH0070FDY","Hider2"],
+"192.168.0.124":["159CL170070G4Y","Hider3"]}
+```
 
 ## Connect Robot to Wifi
 Power up the DJI robomaster, and change the smart controller on it to connect to router.
