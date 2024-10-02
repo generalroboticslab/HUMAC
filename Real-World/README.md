@@ -20,6 +20,9 @@ source devel/setup.sh
 roslaunch vicon_bridge vicon.launch
 ```
 
+## Rename Robot and Prepare the Json File
+
+
 ## Connect Robot to Wifi
 Power up the DJI robomaster, and change the smart controller on it to connect to router.
 Then run the following command:
