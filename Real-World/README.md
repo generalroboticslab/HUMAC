@@ -67,6 +67,8 @@ python collect_heuristic_data.py
 
 
 
+
+
 ### Human Data
 For collecting human data, you need to open a client and join the game to guide the seekers, everything else stay the same.
 
