@@ -11,6 +11,8 @@ HUMAC/Simulation/environment/Crew version/crew-dojo/Builds
 
 ## Collecting Data
 
+### Collect Heuristic Data
+
 Run the following command to collect heuristic data control.
 
 Change to the algorithm folder:
@@ -45,6 +47,7 @@ Below is a description of each configuration option:
 - **`time_scale`**: The time scale of the simulation. For collecting heuristic data, the time scale is recommended to be <= 6. For collecting human guidance data, it is recommended to be <= 2.
 </div>
 
+### Collect Human Data
 
 ## Training 
 Run the following command to train the model.
