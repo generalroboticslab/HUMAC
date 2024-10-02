@@ -27,7 +27,7 @@ The key is the ip address of the robot, and the value is a list with [Unique ID 
 ```plaintext
 HUMAC\Real-World\environment\
 ```
-An example robot_info.json will be like:
+The agent name must be like Seeker{ID} or Hider{ID}. An example robot_info.json will be like:
 
 ```plaintext
 {"192.168.0.123":["159CKCH0070ACX","Seeker1"],
