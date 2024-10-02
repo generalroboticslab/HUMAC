@@ -44,7 +44,7 @@ Then run the following command:
 
 ```bash
 cd Real-World\environment\
-python3 connect_robot_to_wifi.py 
+python connect_robot_to_wifi.py 
 ```
 
 After successfully connecting to wifi, there will be a prompt in the terminal, as well as a sound from the speaker of the robot.
