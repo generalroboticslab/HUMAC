@@ -131,7 +131,7 @@ Below is a description of each configuration option:
 
 All the testing result will be logged to the folder 
 ```bash
-test_results
+HUMAC/Simulation/test_results
 ```
 folder.
  To reproduce the result we provided in the paper, set **`starting_seed`** to be 1 and **`num_games`** to 450. Our testing result can be found [here](https://drive.google.com/drive/folders/1fOJgRqlxBFC0VGEhBA50dXefr5-JooDF?usp=sharing)
