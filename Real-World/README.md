@@ -25,7 +25,7 @@ roslaunch vicon_bridge vicon.launch
 The key is the ip address of the robot, and the value is a list with [Unique ID on robot smart controller, agent name]. Please save the json file as robot_info.json into the folder:
 
 ```plaintext
-HUMAC\Real-World\environment\
+HUMAC/Real-World/environment/
 ```
 The agent name must be like Seeker{ID} or Hider{ID}. The ID should start from 1 and increase as the number of robots increases. An example robot_info.json will be like:
 
@@ -43,7 +43,7 @@ Power up the DJI robomaster, and change the smart controller on it to connect to
 Then run the following command:
 
 ```bash
-cd Real-World\environment\
+cd Real-World/environment/
 python connect_robot_to_wifi.py 
 ```
 
@@ -58,7 +58,8 @@ To collect data, prepare the amount of robot you need. For example, if you want 
 Run the following command to start the process:
 
 ```bash
-
+cd Real-World/environment/
+python connect/collect_heuristic_data.py  
 ```
 
 
