@@ -2,8 +2,7 @@ defaults:
   - /envs/base_hide_and_seek@_here_
   - _self_
 
-unity_server_build_path_linux: '../../environment/Crew version/crew-dojo/Builds/HideAndSeek-StandaloneLinux64-Server/Unity.x86_64'
+unity_server_build_path_linux: '../../environment/HideAndSeek-StandaloneLinux64-Server/Unity.x86_64'
 log_folder_path: '../'
-unity_server_build_path_osx: '../crew-dojo/Builds/FindTreasure-StandaloneOSX-Server/Unity'
 no_graphics: false
 
