@@ -66,14 +66,21 @@ python collect_heuristic_data.py
 
 The prompt will be like this 
 
+1. **Setup the arena**:
+
 ![Step1](../images/step1.png)
 
 Put only the obstacles in the arena then press '1' and enter.
 
-
+2. **Spawn the Robots**:
 ![Step2](../images/step2.png)
 
 Put all the robots in the arena then press '2' to start the episode.
+
+3. **Take out the caught hider**:
+![Step3](../images/step3.png)
+
+As the game proceed, if any hider robot is caught, the whole game will be paused and you need to take the caught one out of the arena fot
 
 
 
