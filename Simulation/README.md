@@ -6,7 +6,7 @@ Our simulation can only Linux machine with [CREW](https://generalroboticslab.git
 Please download the game builds [here](https://drive.google.com/drive/folders/1Z8GJvNse7anBsv67tYMU9W0OUWAqNjOm?usp=drive_link) and put them into the folder:
 
 ```bash
-HUMAC/Simulation/environment/Crew version/crew-dojo/Builds
+HUMAC/Simulation/environment/
 ```
 
 ## Collecting Data
