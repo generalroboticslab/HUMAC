@@ -55,7 +55,11 @@ For collecting human data, you need to open a client and join the game to guide 
 
 We have four policies in the paper, which are **`IL / IL-Long`**, **`PE-N`**, **`PE-H`**, and **`PE-T`**. You can train each of these policies by running the respective training script. 
 
-If you wish to use the policies we trained, you can download them [here](https://drive.google.com/drive/folders/1_xfZlow_IGRBIz0-5BSLC76ATBmR-kfN?usp=drive_link). After you download them, please move them under the model_weights folder to make sure the evaluation runs smoothly.
+If you wish to use the policies we trained, you can download them [here](https://drive.google.com/drive/folders/1_xfZlow_IGRBIz0-5BSLC76ATBmR-kfN?usp=drive_link). After you download them, please move them under the 
+```bash
+HUMAC\Simulation\model_weights
+```
+folder to make sure the evaluation runs smoothly.
 
 To train any of the policies, follow the steps below:
 
