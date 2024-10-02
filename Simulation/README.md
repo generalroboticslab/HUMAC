@@ -67,8 +67,13 @@ To train any of the policies, follow the steps below:
 2. **Run the training script**:
     Use the appropriate policy name in place of **`{policy_name}`** (**`IL`**, **`PE-N`**, **`PE-H`**, or **`PE-T`**), and provide any specific arguments as needed:
    ```bash
-    WANDB_MODE=disabled python train_{policy_name}.py --seed_value [seed_value] --batch_size [batch_size] --learning_rate [learning_rate] --epochs [epochs] --num_of_frames [num_of_frames] --step_ahead [step_ahead] --data_root_folder [path/to/data]
+    WANDB_MODE=disabled python train_{policy_name}.py --seed_value [seed_value] --batch_size [batch_size] --learning_rate [learning_rate] --epochs [epochs] --num_of_frames [num_of_frames] --step_ahead [step_ahead] --data_root_folder [path/to/data] 
    ```
+
+3. **Fine-tuning**:
+    ```bash
+    --seed_value [seed_value] --batch_size [batch_size] --learning_rate [learning_rate] --epochs [epochs] --num_of_frames [num_of_frames] --step_ahead [step_ahead] --data_root_folder [path/to/data] --model [model_name]
+    ```
 
 4. **Available command-line arguments**:
     - **`--seed_value`**: The seed value for randomness to ensure reproducibility (default: 42).
@@ -79,21 +84,16 @@ To train any of the policies, follow the steps below:
     - **`--num_of_frames`**: The number of frames to stack (default: 5).
     - **`--step_ahead`**: The number of steps ahead for prediction. Setting step_ahead to be 1 is training IL, and making it > 1 is predicting longer than 1 step which refers to IL-Long in the paper.
     - **`--data_root_folder`**: The root folder path for the dataset (default: "path/to/IL/data").
+    - **`--model`**: The name of the model to fine-tune.
 
 All the models will be saved under the model_weights folder. 
-
-5. **Fine-tuning**:
-    
-    **`WANDB_MODE=disabled python train_PE_N.py --seed_value 42 --batch_size 64 --learning_rate 0.0001 --epochs 50 --num_of_frames 5 --step_ahead 5 --data_root_folder "path/to/PE-N/data"`**
-
-    In this example, the learning rate is reduced for fine-tuning, and the batch size is decreased for more fine-grained updates.
 
 ### Notes:
 - **Weights & Biases (WandB)**: If you're using [WandB](https://wandb.ai/), ensure you set **`WANDB_MODE=online`** and have your API key configured. If you want to disable it, you can use **`WANDB_MODE=disabled`** as shown in the examples.
 
 ## Evaluation
 
-To evaluate the trained models run:
+To evaluate the trained models run the following:
 
 ```bash
 cd Simulation/crew-algorithms/crew_algorithms/
