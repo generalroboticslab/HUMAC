@@ -51,7 +51,7 @@ Below is a description of each configuration option:
 For collecting human data, you need to open a client and join the game to guide the seekers, everything else stay the same.
 
 ## Trained Policies
-If you wish to use the policies we trained, you can download them [here](https://drive.google.com/drive/folders/1_xfZlow_IGRBIz0-5BSLC76ATBmR-kfN?usp=drive_link). After you download them, please move them under the 
+If you wish to use the policies we trained and skip the training and fine-tuning, you can download them [here](https://drive.google.com/drive/folders/1_xfZlow_IGRBIz0-5BSLC76ATBmR-kfN?usp=drive_link). After you download them, please move them under the 
 ```bash
 HUMAC\Simulation\model_weights
 ```
