@@ -87,7 +87,7 @@ To train any of the policies, follow the steps below:
 - **Weights & Biases (WandB)**: If you're using [WandB](https://wandb.ai/), ensure you set **`WANDB_MODE=online`** and have your API key configured. If you want to disable it, you can use **`WANDB_MODE=disabled`** as shown in the examples.
 - **Dataset Path**: Ensure that the **`--data_root_folder`** points to the correct path where your dataset is stored for each policy.
 - **GPU/CPU Setup**: By default, the script should automatically utilize available GPUs. If you want to enforce CPU training, you may need to modify the script.
-```
+
 
 ## Evaluation
 
