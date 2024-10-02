@@ -6,13 +6,20 @@
 
 [Robot](https://www.dji.com/robomaster-ep)
 
-## Software Requirement
-### Install the dependency 
-
+## Install the dependency 
 ```bash
 cd Real-World
 pip install -r requirements.txt
 ```
+## Streaming Data from Vicon System to computer
+
+```bash
+cd ~/catkin_ws
+catkin_make
+source devel/setup.sh
+roslaunch vicon_bridge vicon.launch
+```
+
 
 ## Collecting Data
 
