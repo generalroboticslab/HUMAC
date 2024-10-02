@@ -30,12 +30,12 @@ HUMAC\Real-World\environment\
 An example robot_info.json will be like:
 
 ```plaintext
-{"192.168.0.121":["159CKCH0070FA2","Seeker1"],
-"192.168.0.117":["159CL170070G5F","Seeker2"],
-"192.168.0.116":["159CL170070G26","Seeker3"],
-"192.168.0.118":["159CL170070FZU","Hider1"],
-"192.168.0.122":["159CKCH0070FDY","Hider2"],
-"192.168.0.124":["159CL170070G4Y","Hider3"]}
+{"192.168.0.123":["159CKCH0070ACX","Seeker1"],
+"192.168.0.154":["159CL170070WES","Seeker2"],
+"192.168.0.166":["159CL170070CDD","Seeker3"],
+"192.168.0.188":["159CL170070CVT","Hider1"],
+"192.168.0.199":["159CKCH0070WEF","Hider2"],
+"192.168.0.100":["159CL170070GTE","Hider3"]}
 ```
 
 ## Connect Robot to Wifi
