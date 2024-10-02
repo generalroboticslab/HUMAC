@@ -66,7 +66,7 @@ python collect_heuristic_data.py
 
 The prompt will be like this 
 
-![Step1](images/step1.png)
+![Step1](../images/step1.png)
 
 
 
