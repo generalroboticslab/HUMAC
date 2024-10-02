@@ -3,6 +3,7 @@
 ## Hardware setup 
 
 [Vicon Motion Tracking system](https://www.vicon.com/)
+//
 [Robot](https://www.dji.com/robomaster-ep)
 
 ## Software Requirement
