@@ -72,15 +72,18 @@ The prompt will be like this
 
 Put only the obstacles in the arena then press '1' and enter.
 
+
 2. **Spawn the Robots**:
+
 ![Step2](../images/step2.png)
 
 Put all the robots in the arena then press '2' to start the episode.
 
 3. **Take out the caught hider**:
+
 ![Step3](../images/step3.png)
 
-As the game proceed, if any hider robot is caught, the whole game will be paused and you need to take the caught one out of the arena fot
+As the game proceed, if any hider robot is caught, the whole game will be paused and you need to take the caught one (The Led Light of the hider robot will turn from green to blue) out of the arena. After that, press '3' and enter to resume the game.
 
 
 
