@@ -91,7 +91,11 @@ To train any of the policies, follow the steps below:
     - **`--data_root_folder`**: The root folder path for the dataset (default: "path/to/IL/data").
     - **`--model`**: The name of the model to fine-tune.
 
-All the models will be saved under the model_weights folder. 
+All the models will be saved under the 
+```bash
+HUMAC\Simulation\model_weights
+```
+folder. 
 
 ### Notes:
 - **Weights & Biases (WandB)**: If you're using [WandB](https://wandb.ai/), ensure you set **`WANDB_MODE=online`** and have your API key configured. If you want to disable it, you can use **`WANDB_MODE=disabled`** as shown in the examples.
