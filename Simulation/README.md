@@ -25,6 +25,7 @@ cd Simulation/crew-algorithms/crew_algorithms/
 Export python path:
 ```bash
 export PYTHONPATH=..:$PYTHONPATH
+conda activate crew
 ```
 
 Collect data:
