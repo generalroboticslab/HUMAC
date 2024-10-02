@@ -57,13 +57,17 @@ We have four policies in the paper, which are **`IL / IL-Long`**, **`PE-N`**, **
 To train any of the policies, follow the steps below:
 
 1. **Navigate to the training directory**:
-    **`cd Simulation/training/`**
-
+    ```bash
+    cd Simulation/training/
+    ```
+    
 2. **Run the training script**:
     Use the appropriate policy name in place of **`{policy_name}`** (**`IL`**, **`PE-N`**, **`PE-H`**, or **`PE-T`**), and provide any specific arguments as needed:
-    **`WANDB_MODE=disabled python train_{policy_name}.py --seed_value [seed_value] --batch_size [batch_size] --learning_rate [learning_rate] --epochs [epochs] --num_of_frames [num_of_frames] --step_ahead [step_ahead] --data_root_folder [path/to/data]`**
+   ```bash
+    WANDB_MODE=disabled python train_{policy_name}.py --seed_value [seed_value] --batch_size [batch_size] --learning_rate [learning_rate] --epochs [epochs] --num_of_frames [num_of_frames] --step_ahead [step_ahead] --data_root_folder [path/to/data]
+   ```
 
-3. **Available command-line arguments**:
+4. **Available command-line arguments**:
     - **`--seed_value`**: The seed value for randomness to ensure reproducibility (default: 42).
     - **`--batch_size`**: The batch size for the data loader (default: 128).
     - **`--learning_rate`**: The learning rate for the optimizer (default: 0.001).
@@ -73,7 +77,7 @@ To train any of the policies, follow the steps below:
     - **`--step_ahead`**: The number of steps ahead for prediction (default: 5).
     - **`--data_root_folder`**: The root folder path for the dataset (default: "path/to/IL/data").
       
-4. **Fine-tuning**:
+5. **Fine-tuning**:
     You can fine-tune any of the pre-trained models by reducing the learning rate and adjusting other hyperparameters. Modify the command-line arguments to tailor the fine-tuning process based on your requirements. For example:
     **`WANDB_MODE=disabled python train_PE_N.py --seed_value 42 --batch_size 64 --learning_rate 0.0001 --epochs 50 --num_of_frames 5 --step_ahead 5 --data_root_folder "path/to/PE-N/data"`**
 
