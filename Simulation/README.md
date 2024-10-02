@@ -13,9 +13,18 @@ HUMAC/Simulation/environment/Crew version/crew-dojo/Builds
 
 Run the following command to collect heuristic data control.
 
+Change to the algorithm folder:
 ```bash
 cd Simulation/crew-algorithms/crew_algorithms/
+```
+
+Export python path:
+```bash
 export PYTHONPATH=..:$PYTHONPATH
+```
+
+Collect data:
+```bash
 WANDB_MODE=disabled python collect_data envs.num_seekers=[num_seekers] envs.num_hiders=[num_hiders] envs.start_seed=[starting_seed] envs.num_games=[num_games] envs.data_folder=[\path\to\save\data] envs.time_scale=[time_scale]
 ```
 
