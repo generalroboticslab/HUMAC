@@ -11,7 +11,7 @@
 cd Real-World
 pip install -r requirements.txt
 ```
-## Listening Data from Vicon System
+## Start Listening Data from Vicon System
 
 ```bash
 cd ~/catkin_ws
@@ -21,7 +21,13 @@ roslaunch vicon_bridge vicon.launch
 ```
 
 ## Connect Robot to Wifi
+Power up the DJI robomaster, and change the smart controller on it to connect to router.
+Then run the following command:
 
+```bash
+cd Real-World
+python3 environment/connect_robot_to_wifi.py 
+```
 
 
 ## Collecting Data
