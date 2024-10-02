@@ -68,7 +68,12 @@ The prompt will be like this
 
 ![Step1](../images/step1.png)
 
+Put only the obstacles in the arena then press '1' and enter.
 
+
+![Step2](../images/step2.png)
+
+Put all the robots in the arena then press '2' to start the episode.
 
 
 
