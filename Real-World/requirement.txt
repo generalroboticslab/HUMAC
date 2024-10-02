@@ -1,0 +1,138 @@
+actionlib==1.14.0
+anaconda-anon-usage @ file:///croot/anaconda-anon-usage_1710965072196/work
+angles==1.9.13
+archspec @ file:///croot/archspec_1709217642129/work
+argcomplete==3.5.0
+boltons @ file:///work/perseverance-python-buildout/croot/boltons_1698851177130/work
+bondpy==1.8.6
+Brotli @ file:///croot/brotli-split_1714483155106/work
+camera-calibration==1.17.0
+camera-calibration-parsers==1.12.0
+catkin==0.8.10
+certifi @ file:///croot/certifi_1717618050233/work/certifi
+cffi @ file:///croot/cffi_1714483155441/work
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+conda @ file:///croot/conda_1715635703388/work
+conda-content-trust @ file:///croot/conda-content-trust_1714483159009/work
+conda-libmamba-solver @ file:///croot/conda-libmamba-solver_1706733287605/work/src
+conda-package-handling @ file:///croot/conda-package-handling_1718138267740/work
+conda_package_streaming @ file:///croot/conda-package-streaming_1718136078615/work
+controller-manager==0.20.0
+controller-manager-msgs==0.20.0
+cryptography @ file:///croot/cryptography_1714660666131/work
+cv-bridge==1.16.2
+defisheye==1.4.1
+diagnostic-analysis==1.11.0
+diagnostic-common-diagnostics==1.11.0
+diagnostic-updater==1.11.0
+distro @ file:///croot/distro_1714488253808/work
+dynamic-reconfigure==1.7.3
+frozendict @ file:///croot/frozendict_1713194832637/work
+gazebo_plugins==2.9.2
+gazebo_ros==2.9.2
+gencpp==0.7.0
+geneus==3.0.0
+genlisp==0.4.18
+genmsg==0.6.0
+gennodejs==2.0.2
+genpy==0.6.15
+idna @ file:///croot/idna_1714398848350/work
+image-geometry==1.16.2
+interactive-markers==1.12.0
+joint-state-publisher==1.15.1
+joint-state-publisher-gui==1.15.1
+jsonpatch @ file:///croot/jsonpatch_1714483231291/work
+jsonpointer==2.1
+laser_geometry==1.6.7
+libmambapy @ file:///croot/mamba-split_1714483352891/work/libmambapy
+menuinst @ file:///croot/menuinst_1718132535249/work
+message-filters==1.16.0
+numpy==2.0.1
+opencv-python==4.10.0.84
+packaging @ file:///croot/packaging_1710807400464/work
+pillow==10.4.0
+platformdirs @ file:///work/perseverance-python-buildout/croot/platformdirs_1701732573265/work
+pluggy @ file:///work/perseverance-python-buildout/croot/pluggy_1698805497733/work
+pycosat @ file:///croot/pycosat_1714510623388/work
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pygubu==0.35.5
+PySocks @ file:///work/perseverance-python-buildout/croot/pysocks_1698845478203/work
+python-qt-binding==0.4.4
+qt-dotgraph==0.4.2
+qt-gui==0.4.2
+qt-gui-cpp==0.4.2
+qt-gui-py-common==0.4.2
+requests @ file:///croot/requests_1716902831423/work
+resource_retriever==1.12.7
+rosbag==1.16.0
+rosboost-cfg==1.15.8
+rosclean==1.15.8
+roscreate==1.15.8
+rosgraph==1.16.0
+roslaunch==1.16.0
+roslib==1.15.8
+roslint==0.12.0
+roslz4==1.16.0
+rosmake==1.15.8
+rosmaster==1.16.0
+rosmsg==1.16.0
+rosnode==1.16.0
+rosparam==1.16.0
+rospy==1.16.0
+rosservice==1.16.0
+rostest==1.16.0
+rostopic==1.16.0
+rosunit==1.15.8
+roswtf==1.16.0
+rqt-console==0.4.12
+rqt-image-view==0.4.17
+rqt-logger-level==0.4.12
+rqt-moveit==0.5.11
+rqt-reconfigure==0.5.5
+rqt-robot-dashboard==0.5.8
+rqt-robot-monitor==0.5.15
+rqt-runtime-monitor==0.5.10
+rqt-rviz==0.7.0
+rqt-tf-tree==0.6.4
+rqt_action==0.4.9
+rqt_bag==0.5.1
+rqt_bag_plugins==0.5.1
+rqt_dep==0.4.12
+rqt_graph==0.4.14
+rqt_gui==0.5.3
+rqt_gui_py==0.5.3
+rqt_launch==0.4.9
+rqt_msg==0.4.10
+rqt_nav_view==0.5.7
+rqt_plot==0.4.13
+rqt_pose_view==0.5.11
+rqt_publisher==0.4.10
+rqt_py_common==0.5.3
+rqt_py_console==0.4.10
+rqt_robot_steering==0.5.12
+rqt_service_caller==0.4.10
+rqt_shell==0.4.11
+rqt_srv==0.4.9
+rqt_top==0.4.10
+rqt_topic==0.4.13
+rqt_web==0.4.10
+ruamel.yaml @ file:///work/perseverance-python-buildout/croot/ruamel.yaml_1698863605521/work
+rviz==1.14.25
+sensor-msgs==1.13.1
+setuptools==69.5.1
+smach==2.5.2
+smach-ros==2.5.2
+smclib==1.8.6
+tf==1.13.2
+tf-conversions==1.13.2
+tf2-geometry-msgs==0.7.7
+tf2-kdl==0.7.7
+tf2-py==0.7.7
+tf2-ros==0.7.7
+topic-tools==1.16.0
+tqdm @ file:///croot/tqdm_1716395931952/work
+truststore @ file:///work/perseverance-python-buildout/croot/truststore_1701735771625/work
+urllib3 @ file:///croot/urllib3_1718912636303/work
+wheel==0.43.0
+xacro==1.14.18
+zstandard @ file:///croot/zstandard_1714677652653/work
