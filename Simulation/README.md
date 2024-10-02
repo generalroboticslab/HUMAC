@@ -51,19 +51,38 @@ Below is a description of each configuration option:
 For collecting human data, you need to open a client and join the game to guide the seekers, everything else stay the same.
 
 
-## Training 
-Run the following command to train the model.
+## Training and Fine-tuning
+We have four policies in the paper, which are **`IL / IL-Long`**, **`PE-N`**, **`PE-H`**, and **`PE-T`**. You can train each of these policies by running the respective training script. 
 
-```bash
-cd Simulation/training/
-python train.py
-```
-## Fine-tuning
-Run the following command to fine-tune the model.
+To train any of the policies, follow the steps below:
 
-```bash
-cd Simulation/training/
-python Fine-tune.py
+1. **Navigate to the training directory**:
+    **`cd Simulation/training/`**
+
+2. **Run the training script**:
+    Use the appropriate policy name in place of **`{policy_name}`** (**`IL`**, **`PE-N`**, **`PE-H`**, or **`PE-T`**), and provide any specific arguments as needed:
+    **`WANDB_MODE=disabled python train_{policy_name}.py --seed_value [seed_value] --batch_size [batch_size] --learning_rate [learning_rate] --epochs [epochs] --num_of_frames [num_of_frames] --step_ahead [step_ahead] --data_root_folder [path/to/data]`**
+
+3. **Available command-line arguments**:
+    - **`--seed_value`**: The seed value for randomness to ensure reproducibility (default: 42).
+    - **`--batch_size`**: The batch size for the data loader (default: 128).
+    - **`--learning_rate`**: The learning rate for the optimizer (default: 0.001).
+    - **`--epochs`**: The number of training epochs (default: 150).
+    - **`--num_workers`**: The number of CPU workers used for data loading (default: 1).
+    - **`--num_of_frames`**: The number of frames to stack (default: 5).
+    - **`--step_ahead`**: The number of steps ahead for prediction (default: 5).
+    - **`--data_root_folder`**: The root folder path for the dataset (default: "path/to/IL/data").
+      
+4. **Fine-tuning**:
+    You can fine-tune any of the pre-trained models by reducing the learning rate and adjusting other hyperparameters. Modify the command-line arguments to tailor the fine-tuning process based on your requirements. For example:
+    **`WANDB_MODE=disabled python train_PE_N.py --seed_value 42 --batch_size 64 --learning_rate 0.0001 --epochs 50 --num_of_frames 5 --step_ahead 5 --data_root_folder "path/to/PE-N/data"`**
+
+    In this example, the learning rate is reduced for fine-tuning, and the batch size is decreased for more fine-grained updates.
+
+### Notes:
+- **Weights & Biases (WandB)**: If you're using [WandB](https://wandb.ai/), ensure you set **`WANDB_MODE=online`** and have your API key configured. If you want to disable it, you can use **`WANDB_MODE=disabled`** as shown in the examples.
+- **Dataset Path**: Ensure that the **`--data_root_folder`** points to the correct path where your dataset is stored for each policy.
+- **GPU/CPU Setup**: By default, the script should automatically utilize available GPUs. If you want to enforce CPU training, you may need to modify the script.
 ```
 
 ## Evaluation
