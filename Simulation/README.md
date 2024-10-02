@@ -74,7 +74,7 @@ To train any of the policies, follow the steps below:
     - **`--epochs`**: The number of training epochs (default: 150).
     - **`--num_workers`**: The number of CPU workers used for data loading (default: 1).
     - **`--num_of_frames`**: The number of frames to stack (default: 5).
-    - **`--step_ahead`**: The number of steps ahead for prediction (default: 5).
+    - **`--step_ahead`**: The number of steps ahead for prediction. Setting step_ahead to be 1 is training IL, and making it > 1 is predicting longer than 1 step which refers to IL-Long in the paper.
     - **`--data_root_folder`**: The root folder path for the dataset (default: "path/to/IL/data").
       
 5. **Fine-tuning**:
