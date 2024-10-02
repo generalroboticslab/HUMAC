@@ -11,7 +11,7 @@
 cd Real-World
 pip install -r requirements.txt
 ```
-## Streaming Data from Vicon System to computer
+## Listening Data from Vicon System
 
 ```bash
 cd ~/catkin_ws
@@ -19,6 +19,9 @@ catkin_make
 source devel/setup.sh
 roslaunch vicon_bridge vicon.launch
 ```
+
+## Connect Robot to Wifi
+
 
 
 ## Collecting Data
