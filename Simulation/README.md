@@ -16,7 +16,7 @@ Run the following command to collect heuristic data control.
 ```bash
 cd Simulation/crew-algorithms/crew_algorithms/
 export PYTHONPATH=..:$PYTHONPATH
-WANDB_MODE=disabled python collect_data envs.num_seekers=[num_seekers] envs.num_hiders=[num_hiders] envs.start_seed=[starting_seed] envs.num_games=[num_games]
+WANDB_MODE=disabled python collect_data envs.num_seekers=[num_seekers] envs.num_hiders=[num_hiders] envs.start_seed=[starting_seed] envs.num_games=[num_games] envs.data_folder=[\path\to\save\data] envs.time_scale=[time_scale]
 ```
 
 <div style="background-color:#f0f0f0; padding:10px; border-radius:5px;">
@@ -31,9 +31,11 @@ Below is a description of each configuration option:
 
 - **`num_games`**: The total number of games or rounds to be played during data collection. Increasing this number allows for more extensive data to be gathered.
 
+-**`\path\to\save\data`**: Path to save the dataset.
+
+-**`time_scale`**: The time scale of the simulation. For collecting heuristic data, the time scale is recommended to be <= 6. For collecting human guidance data, it is recommended to be <= 2.
 </div>
 
-All the data will be collected to the folder.
 
 ## Training 
 Run the following command to train the model.
