@@ -9,6 +9,8 @@ Please download the game builds [here](https://drive.google.com/drive/folders/1Z
 HUMAC/Simulation/environment/
 ```
 
+Make sure both x86_64 files are excutable on your device.
+
 ## Collecting Data
 
 ### Heuristic Data
