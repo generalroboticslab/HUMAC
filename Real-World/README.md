@@ -98,7 +98,7 @@ python collect_human_data.py
 Everything else stay the same. Use the UI popped up to guide the robots. Left-click to set robot destination and right-click to switch between robots.
 
 ## Trained Policies
-If you wish to use the policies we trained and skip the training and fine-tuning, you can download them [here](https://drive.google.com/drive/folders/1_xfZlow_IGRBIz0-5BSLC76ATBmR-kfN?usp=drive_link). After you download them, please move them under the 
+If you wish to use the policies we trained and skip the training and fine-tuning, you can download them [here](https://drive.google.com/drive/folders/1PD8xUyoZI92qHqNpSBPHLH5rsxumaeYC?usp=sharing). After you download them, please move them under the 
 ```bash
 HUMAC\Simulation\model_weights
 ```
