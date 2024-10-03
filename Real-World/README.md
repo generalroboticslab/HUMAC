@@ -107,7 +107,7 @@ folder to make sure the evaluation runs smoothly.
 
 ## Training and Fine-tuning
 
-We have four policies in the paper, which are **`IL / IL-Long`**, **`PE-N`**, **`PE-H`**, and **`PE-T`**. You can train each of these policies by running the respective training script. 
+We have tow policies for real-wordl experiment in the paper, which are **`IL/IL-Long`**, and **`PE-T`**. You can train each of these policies by running the trainining script.
 
 To train any of the policies, follow the steps below:
 
