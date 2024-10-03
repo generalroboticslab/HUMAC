@@ -6,7 +6,7 @@
 
 [Robot](https://www.dji.com/robomaster-ep)
 
-[RGB Camera]()
+[RGB Camera](https://www.amazon.com/WyreStorm-Presenter-Noise-canceling-Conference-Education/dp/B09TJZSFJ9/ref=sr_1_2_sspa?crid=29KGZMDETE448&dib=eyJ2IjoiMSJ9.K7Mz1N5pED0yn1EBz_7tsMmJcTWqCLzANK6lnVj6yZ9V5uD4kc1B7-4I_xnWFgH8gJldoz3WBoSzdvsUCGDbSlYtoeLfJnz06w3noIexm9s5SuyaB7MUWGp6FxGD7kwjQcmmq5LeJ4beEwjbdsg5AbRet795shZuA0v7c70FSqrn-nsn7yiEJHx4SEQBo1tbUHznFT8kRHZRhLzboiNZQmwzdy47Davce5h4dUZOhhY.77xNXPE3SPziEOYvcN4Hf0WESYgW5xne4JkEi39Z9Nk&dib_tag=se&keywords=webcam+4k+fisheye&qid=1727971531&sprefix=webcam+4k+fisheye%2Caps%2C81&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1)
 
 ## Install the dependency 
 ```bash
