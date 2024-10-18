@@ -1,6 +1,6 @@
 # Simulation
 
-Our simulation can only Linux machine with [CREW](https://generalroboticslab.github.io/crew-docs/) correctly setup.
+Our simulation can only run on Linux machine with [CREW](https://generalroboticslab.github.io/crew-docs/) correctly setup.
 
 ## Download Game Builds
 Please download the game builds [here](https://drive.google.com/drive/folders/1Z8GJvNse7anBsv67tYMU9W0OUWAqNjOm?usp=drive_link), unzip the two folders, and put them into the folder:
