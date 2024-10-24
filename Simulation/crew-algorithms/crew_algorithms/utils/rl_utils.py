@@ -71,14 +71,13 @@ def make_base_env(
     engine_configuration_channel = EngineConfigurationChannel()
     side_channels.append(engine_configuration_channel)
 
-    if env_cfg.time_scale > 1.0:
-        engine_configuration_channel.set_configuration_parameters(
-            width=900,
-            height=600,
-            quality_level=10,
-            time_scale=env_cfg.time_scale,
-            target_frame_rate=50,
-        ) 
+    engine_configuration_channel.set_configuration_parameters(
+	    width=900,
+	    height=600,
+	    quality_level=10,
+	    time_scale=env_cfg.time_scale,
+	    target_frame_rate=50,
+	) 
 
     base_env = UnityEnv(
         str(env_cfg.unity_server_build_path),

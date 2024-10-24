@@ -1,0 +1,41 @@
+envs:
+  name: hide_and_seek
+  num_stacks: 1
+  num_channels: 3
+  unity_server_build_path_osx: ???
+  unity_server_build_path_linux: !!python/object/apply:pathlib.PosixPath
+  - ..
+  - ..
+  - environment
+  - HideAndSeek-StandaloneLinux64-Server
+  - Unity.x86_64
+  unity_server_build_path: ???
+  log_folder_path: !!python/object/apply:pathlib.PosixPath
+  - ..
+  human_delay: 1
+  no_graphics: false
+  num_hiders: 4
+  num_seekers: 4
+  start_seed: 1
+  num_games: 10
+  decision_frequency: 0.2
+  num_seekers_with_policy: 0
+  base_policy: Heuristic
+  addon_policy: IL
+  time_scale: 3.0
+  data_folder: try_new_build
+collector:
+  collector_device:
+  - cpu
+  pin_memory: false
+  frames_per_batch: 1
+  total_frames: 100000
+  num_workers: 32
+  env_per_collector: 8
+  seed: 42
+  exploration_mode: random
+  async_collection: false
+wandb:
+  entity: lingyuz
+  project: random
+collect_data: true
