@@ -1,6 +1,0 @@
-- envs.num_seekers=4
-- envs.num_hiders=3
-- envs.start_seed=1
-- envs.num_games=2
-- envs.data_folder=try_new_build
-- envs.time_scale=1
